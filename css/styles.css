@@ -1,0 +1,136 @@
+@import url("https://fonts.googleapis.com/css2?family=Overpass&display=swap");
+
+body {
+  background-color: hsl(216, 12%, 8%);
+  font-family: "Overpass", sans-serif;
+}
+
+.parent {
+  background-color: hsl(213, 19%, 18%);
+  border-radius: 20px;
+
+  margin: 0 auto;
+  padding: 30px 30px;
+  width: 300px;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.rating-state .star-image {
+  background-color: hsl(213, 19%, 22%);
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: 3s ease-in-out rotate infinite alternate;
+}
+
+@keyframes rotate {
+  0% {
+    transform: translateX(0px) rotateZ(0deg);
+  }
+
+  100% {
+    transform: translateX(180px) rotateZ(-360deg);
+  }
+}
+
+.rating-state .star-image img {
+  width: 0.8em;
+}
+
+.text {
+  color: white;
+  font-weight: 500;
+}
+
+p {
+  color: hsl(216, 12%, 54%);
+  font-size: 15px;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+.rating-state .rating-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 0;
+}
+
+.rating-state .rating-list span {
+  color: hsl(217, 12%, 63%);
+  font-weight: 400;
+
+  background-color: hsl(213, 19%, 22%);
+  border-radius: 50%;
+  width: 50px;
+  height: 50px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.2s ease;
+}
+
+.rating-state .rating-list span:hover {
+  color: white;
+  background-color: hsl(217, 12%, 63%);
+
+  cursor: pointer;
+  transform: scale(1.2);
+}
+
+.rating-state .rating-list span:active {
+  color: white;
+  background-color: hsl(25, 97%, 53%);
+}
+
+.rating-state .rating-list span:last-child:hover {
+  transform: scale(1.4);
+}
+
+.rating-state .submit-btn {
+  color: white;
+  font-size: 13px;
+  letter-spacing: 3px;
+  background-color: hsl(25, 97%, 53%);
+
+  border: none;
+  border-radius: 50px;
+  padding: 10px;
+  width: 100%;
+
+  transition: 0.2s ease-in;
+}
+
+.rating-state .submit-btn:hover {
+  background-color: white;
+  color: hsl(25, 97%, 53%);
+}
+
+.thank-you-state {
+  display: none;
+  text-align: center;
+}
+
+.thank-you-state img {
+  display: block;
+  margin: 20px auto;
+}
+
+.thank-you-state .user-choice-text {
+  color: hsl(25, 97%, 40%);
+  font-weight: 500;
+  background-color: hsl(213, 19%, 22%);
+  border-radius: 20px;
+
+  padding: 10px 20px;
+  margin: 20px auto;
+  width: fit-content;
+}
